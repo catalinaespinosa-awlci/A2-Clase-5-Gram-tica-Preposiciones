@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las preposiciones en la consulta · Español Médico · Clase 5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--graf:#36454F;--graf-d:#1F262B;--amber:#E8A33D;--amber-d:#B57B1E;--mustard:#F7EED9;--mustard-d:#F0E2C2;--ink:#2E3438;--muted:#7C878E;--ok:#27AE60;--ok-bg:#e8f6ee;--bad:#C0392B;--bad-bg:#fbeae8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--mustard);color:var(--ink);min-height:100vh}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
+header{background:var(--graf);border-radius:16px;padding:26px 30px;color:#fff;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-70px;top:-90px;width:240px;height:240px;border-radius:50%;background:rgba(232,163,61,.22)}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--amber);text-transform:uppercase}
+h1{font-family:'Fraunces',Cambria,serif;font-size:clamp(23px,4.6vw,34px);margin:6px 0 4px;position:relative;z-index:1}
+.sub{color:#cfd6da;font-size:14px;position:relative;z-index:1}
+.screen{display:none}.screen.on{display:block;animation:fade .28s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sect{font-family:'Fraunces',serif;font-size:19px;color:var(--graf);margin:26px 0 4px}
+.sect-s{font-size:13px;color:var(--muted);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.cc{background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(31,38,43,.08);cursor:pointer;transition:.15s;overflow:hidden;text-align:left;font-family:inherit;width:100%;border:none;padding:0 0 16px}
+.cc:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(31,38,43,.12)}
+.cc .bar{height:6px}
+.cc .in{padding:16px 18px 0}
+.cc .esp{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.cc h3{font-family:'Fraunces',serif;font-size:18px;color:var(--graf);margin-bottom:7px}
+.cc .res{font-size:12.5px;color:var(--muted);line-height:1.45;margin-bottom:12px}
+.cc .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tag{font-size:10.5px;font-weight:600;background:var(--mustard);color:var(--graf);border-radius:999px;padding:4px 9px}
+.dots{display:inline-flex;gap:3px}.dot{width:6px;height:6px;border-radius:50%;background:var(--mustard-d)}.dot.f{background:var(--amber)}
+.topbar{display:flex;align-items:center;gap:10px;margin:18px 0 14px;flex-wrap:wrap}
+.btn{border:none;border-radius:12px;padding:11px 18px;font:600 14px 'Inter';cursor:pointer;transition:.15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--amber);color:var(--graf-d)}
+.btn.ghost{background:#fff;color:var(--graf);box-shadow:0 1px 3px rgba(31,38,43,.08)}
+.btn.dark{background:var(--graf);color:#fff}
+.grow{flex:1}
+.card{background:#fff;border-radius:16px;padding:20px 24px;box-shadow:0 1px 3px rgba(31,38,43,.08);margin-bottom:14px}
+.lbl{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+/* teoría */
+.acc{background:#fff;border-radius:14px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(31,38,43,.08)}
+.acc .h{padding:15px 18px;cursor:pointer;display:flex;align-items:center;gap:12px}
+.acc .h:hover{background:#fffdf7}
+.acc .tt{font-family:'Fraunces',serif;font-size:19px;color:var(--graf);font-weight:700}
+.acc .ss{font-size:12.5px;color:var(--muted)}
+.acc .ar{margin-left:auto;font-weight:700;color:var(--amber-d);font-size:18px}
+.acc .b{display:none;padding:0 18px 16px}
+.acc.open .b{display:block}
+.uso{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:10px 0;border-top:1px solid var(--mustard-d);font-size:13.5px;line-height:1.55}
+@media(max-width:700px){.uso{grid-template-columns:1fr;gap:3px}}
+.uso .d{color:var(--ink)}
+.uso .e{color:var(--muted);font-style:italic}
+.ojo{background:var(--mustard);border-left:4px solid var(--amber);border-radius:8px;padding:10px 14px;margin-top:12px;font-size:13px}
+.locs{display:flex;flex-wrap:wrap;gap:7px}
+.loc{background:var(--mustard);border:1.5px solid var(--mustard-d);border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:600;color:var(--graf)}
+/* ejercicio */
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;position:sticky;top:0;background:var(--mustard);padding:10px 0;z-index:5}
+.chip{border:1.5px solid var(--mustard-d);background:#fff;color:var(--graf);font:600 13px 'Inter';padding:7px 14px;border-radius:999px;cursor:pointer;transition:.12s}
+.chip:hover{border-color:var(--amber);transform:translateY(-1px)}
+.it{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--mustard-d);align-items:flex-start}
+.it:last-child{border-bottom:none}
+.it .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--mustard);color:var(--graf);font:700 12px 'Inter';display:flex;align-items:center;justify-content:center;margin-top:2px}
+.it.ok .n{background:var(--ok);color:#fff}
+.it.ko .n{background:var(--bad);color:#fff}
+.it .s{font-size:15px;line-height:2.1}
+.gap{display:inline-block;width:92px;border:none;border-bottom:2px solid var(--amber);background:transparent;font:600 15px 'Inter';color:var(--amber-d);text-align:center;padding:1px 4px;outline:none}
+.gap:focus{background:#fffdf7;border-bottom-width:3px}
+.gap.ok{color:#14532d;border-bottom-color:var(--ok);background:var(--ok-bg);border-radius:5px}
+.gap.ko{color:#7f1d1d;border-bottom-color:var(--bad);background:var(--bad-bg);border-radius:5px;text-decoration:line-through}
+.sol{color:var(--ok);font-weight:700;margin-left:5px;font-size:14px}
+.score{display:none;background:var(--graf);color:#fff;border-radius:14px;padding:16px 20px;margin-top:14px;font-size:14.5px}
+.score.on{display:block}
+.score b{color:var(--amber)}
+.bar2{height:7px;background:var(--mustard-d);border-radius:99px;overflow:hidden;margin:14px 0}
+.bar2>div{height:100%;background:var(--amber);width:0;transition:width .4s}
+.fixnote{font-size:11px;color:var(--muted);font-style:italic;margin-left:6px}
+footer{text-align:center;margin-top:34px;font-size:12.5px;color:var(--muted)}
+button:focus-visible,.gap:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Español Médico · Clase 5 · Gramática</div>
+    <h1 id="h1">Las preposiciones en la consulta</h1>
+    <div class="sub" id="hsub">Teoría y 86 frases, todo en lenguaje clínico, con corrección automática</div>
+  </header>
+
+  <!-- ===== HOME ===== -->
+  <section class="screen on" id="s-home">
+    <div class="sect">Teoría</div>
+    <div class="sect-s">Cada preposición con sus usos y ejemplos tomados de la consulta, la planta y el informe clínico.</div>
+    <div class="grid" id="g-teoria"></div>
+    <div class="sect">Práctica</div>
+    <div class="sect-s">Tres actividades de menor a mayor dificultad, todas en contexto sanitario. Se corrigen solas.</div>
+    <div class="grid" id="g-acts"></div>
+  </section>
+
+  <!-- ===== TEORÍA ===== -->
+  <section class="screen" id="s-teoria">
+    <div class="topbar"><button class="btn ghost" id="b1">← Inicio</button><span class="grow"></span>
+      <button class="btn ghost" id="expand">Abrir todo</button></div>
+    <div id="teoria"></div>
+    <div class="card"><div class="lbl">Locuciones preposicionales que ubican</div>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:12px" id="locnota"></p>
+      <div class="locs" id="locs"></div>
+    </div>
+  </section>
+
+  <!-- ===== EJERCICIO ===== -->
+  <section class="screen" id="s-ej">
+    <div class="topbar"><button class="btn ghost" id="b2">← Inicio</button><span class="grow"></span>
+      <span class="tag" id="e-meta"></span></div>
+    <div class="card" id="e-intro"></div>
+    <div class="chips" id="e-chips"></div>
+    <div class="bar2"><div id="e-bar"></div></div>
+    <div class="card" id="e-items"></div>
+    <div class="topbar">
+      <button class="btn primary" id="check">✓ Comprobar</button>
+      <button class="btn ghost" id="reset">↩︎ Reiniciar</button>
+      <button class="btn ghost" id="solve">👁 Ver soluciones</button>
+    </div>
+    <div class="score" id="e-score"></div>
+  </section>
+
+  <footer>Curso <b>Español Médico</b> · AWLCI · Clase 5 · Las preposiciones<br>© Catalina Espinosa</footer>
+</div>
+
+<script>
+const TEORIA=[{"id": "de", "t": "DE", "c": "E76F51", "sub": "Origen, materia, posesión", "usos": [["Indica el punto de partida u origen", "Este paciente es <b>de</b> Guatemala."], ["Indica la materia o el contenido de algo", "Una férula <b>de</b> yeso; un frasco <b>de</b> jarabe."], ["Indica el parentesco o la posesión", "La madre <b>de</b> Luis; el historial <b>de</b> María."], ["Indica el tipo de objeto", "Una sala <b>de</b> espera; una consulta <b>de</b> urgencias."], ["Indica un punto de referencia para localizar", "La farmacia está cerca <b>del</b> hospital; las cuatro <b>de</b> la tarde."]], "ojo": "DE + EL = <b>DEL</b>. Nunca se escribe «de el»: <i>viene <b>del</b> quirófano</i>."}, {"id": "a", "t": "A", "c": "2A9D8F", "sub": "Destino, dirección, modo", "usos": [["Indica un punto de llegada o destino", "El celador lleva al paciente <b>a</b> radiología."], ["Indica orientación hacia una parte o un lado", "<b>Al</b> fondo del pasillo; <b>al</b> principio del tratamiento."], ["Indica un punto de referencia", "Junto <b>a</b> la camilla; frente <b>a</b> la ventanilla."], ["Ante complemento directo de persona o complemento indirecto", "He llamado <b>al</b> médico; dé este informe <b>a</b> su enfermera."], ["Indica el modo como se hacen las cosas", "Vino <b>a</b> pie; sutura <b>a</b> mano; respira <b>a</b> duras penas."]], "ojo": "A + EL = <b>AL</b>. Nunca se escribe «a el»: <i>pasa <b>al</b> box 3</i>."}, {"id": "desde", "t": "DESDE / HASTA", "c": "E8A33D", "sub": "Principio y final de un recorrido", "usos": [["<b>Desde</b>: el principio de un recorrido, el límite inicial en el espacio o el tiempo", "No ha tomado nada <b>desde</b> anoche (está en ayunas)."], ["<b>Hasta</b>: el final de un recorrido, el límite final en el espacio o el tiempo", "No puede comer nada <b>hasta</b> mañana; el dolor le llega <b>hasta</b> el brazo."], ["<b>Hasta</b> también significa «incluso»", "Le dolía <b>hasta</b> al respirar."], ["Principio y final juntos: de…a  /  desde…hasta", "El dolor va <b>desde</b> el pecho <b>hasta</b> la mandíbula."]], "ojo": "Muy útil en la anamnesis: «¿<b>Desde</b> cuándo le duele?» · «¿<b>Hasta</b> dónde se le va el dolor?»"}, {"id": "en", "t": "EN", "c": "457B9D", "sub": "Lugar, tiempo, medio de transporte", "usos": [["Algo está en un espacio, lugar, objeto, período o proceso", "El paciente está <b>en</b> el box 3; <b>en</b> planta; <b>en</b> quirófano."], ["Indica el medio de transporte", "Llegó <b>en</b> ambulancia; vino <b>en</b> taxi (pero <b>a</b> pie)."], ["Indica el modo como hacemos algunas cosas", "<b>En</b> general; en serio; en privado; en resumen; en ayunas."], ["Indica el interior de un período de tiempo", "La operaron <b>en</b> enero; <b>en</b> 2007; <b>en</b> invierno."], ["Indica el tiempo que tardamos en terminar algo", "Los resultados estarán <b>en</b> dos horas."]], "ojo": "Transporte: <b>en</b> ambulancia, pero <b>a</b> pie. Y ojo: <i>tardar <b>en</b> cicatrizar</i>."}, {"id": "porpara", "t": "POR / PARA", "c": "BC6C25", "sub": "La pareja que más cuesta", "usos": [["<b>PARA</b> · finalidad o destino", "Estas gotas son <b>para</b> aliviar la inflamación."], ["<b>PARA</b> · destinatario", "Fumar es malo <b>para</b> la salud. Este informe es <b>para</b> usted."], ["<b>PARA</b> · sentido de «según»", "<b>Para</b> mí, el cuadro es compatible con una gastritis."], ["<b>PARA</b> · «teniendo en cuenta», «en comparación con»", "<b>Para</b> su edad, está en muy buena forma."], ["<b>PARA</b> · capacidad", "Es una habitación <b>para</b> dos camas."], ["<b>PARA</b> · plazo temporal (= «en»)", "Le volveremos a ver <b>para</b> septiembre."], ["<b>PARA</b> · fecha límite", "Los resultados estarán <b>para</b> el lunes."], ["<b>POR</b> · duración", "Debe guardar reposo <b>por</b> dos semanas."], ["<b>POR</b> · localización indeterminada en el espacio o el tiempo", "Le duele <b>por</b> todo el abdomen. Fue <b>por</b> los años noventa."], ["<b>POR</b> · periodicidad o distribución", "Una pastilla <b>por</b> día. Va a diálisis tres veces <b>por</b> semana."], ["<b>POR</b> · motivo, causa, razón", "Ingresó <b>por</b> una neumonía. Llegó tarde <b>por</b> los atascos."], ["<b>POR</b> · «en honor de»", "La colecta es <b>por</b> los enfermos del hospital."], ["<b>POR</b> · intercambio", "Me dieron dos cajas <b>por</b> diez euros. No puedo firmar <b>por</b> él."], ["<b>POR</b> · «en busca de»", "Voy <b>a por</b> el desfibrilador."], ["<b>POR</b> · con verbos de sentimiento", "Está preocupado <b>por</b> el glaucoma. Siento mucha pena <b>por</b> él."], ["<b>POR</b> · el medio", "Le daremos los resultados <b>por</b> teléfono."]], "ojo": "Truco rápido: <b>PARA</b> = objetivo, destinatario, plazo. <b>POR</b> = causa, medio, intercambio, recorrido.<br>Compara: <i>gotas <b>para</b> la conjuntivitis</i> (finalidad) · <i>inflamación <b>por</b> la conjuntivitis</i> (causa)."}, {"id": "entre", "t": "ENTRE", "c": "4C956C", "sub": "Límites y colaboración", "usos": [["Indica los límites del espacio en el que está u ocurre algo", "El páncreas está <b>entre</b> el estómago y la columna."], ["Indica que varios sujetos colaboran para hacer algo", "Moveremos al paciente <b>entre</b> todos."]], "ojo": ""}, {"id": "consin", "t": "CON / SIN", "c": "7A5C61", "sub": "Compañía y su negación", "usos": [["<b>Con</b> indica asociación: una cosa acompaña a otra", "Vino <b>con</b> su hija; duerme <b>con</b> oxígeno."], ["<b>Sin</b> es la negación de con", "Analítica <b>sin</b> alteraciones; acudió <b>sin</b> acompañante; el café <b>sin</b> leche."]], "ojo": "En los informes: <i>abdomen <b>sin</b> hallazgos</i>, <i>paciente <b>con</b> buen estado general</i>."}, {"id": "contra", "t": "CONTRA / HACIA", "c": "1F776C", "sub": "Oposición y orientación", "usos": [["<b>Contra</b>: un elemento se opone a otro, ofrece resistencia", "Se golpeó <b>contra</b> el marco de la puerta; la vacuna <b>contra</b> la gripe."], ["<b>Hacia</b>: el punto espacial o temporal al que se orienta algo", "El dolor se irradia <b>hacia</b> el brazo izquierdo; mire <b>hacia</b> la luz."]], "ojo": "Muy útil: <i>el dolor se irradia <b>hacia</b>…</i> es una pregunta clave de la anamnesis."}], LOCS=["Encima (de)", "Debajo (de)", "Detrás (de)", "Delante (de)", "Enfrente (de)", "Al lado (de)", "Cerca (de)", "Lejos (de)", "A la derecha (de)", "A la izquierda (de)", "Alrededor (de)", "Al principio (de)", "Al final (de)", "Dentro (de)", "Fuera (de)", "Después (de)", "Antes (de)", "En el centro (de)", "En medio (de)", "Al otro lado (de)", "Al fondo (de)"], LOCNOTA="Son imprescindibles para explorar y para dar indicaciones: «El dolor está <b>debajo de</b> las costillas», «La cicatriz está <b>alrededor del</b> ombligo», «Radiología está <b>al fondo del</b> pasillo, <b>a la derecha</b>», «Tómelo <b>antes de</b> las comidas».", ACTS=[{"id": "act1", "t": "Por o Para", "c": "BC6C25", "nivel": 1, "tiempo": "10 min", "sub": "20 frases de oftalmología y terapia del habla.", "chips": ["por", "para"], "intro": "Solo hay dos opciones, pero no siempre es evidente. Compara: <i>gotas <b>para</b> la conjuntivitis</i> (finalidad) frente a <i>inflamación <b>por</b> la conjuntivitis</i> (causa)."}, {"id": "act3", "t": "Preposiciones en general", "c": "457B9D", "nivel": 2, "tiempo": "15 min", "sub": "26 frases de planta, urgencias y consulta con todo el repertorio.", "chips": ["a", "de", "del", "en", "por", "para", "con", "sin", "entre", "desde", "hasta", "hacia", "contra", "sobre", "según"], "intro": "Repaso general en contexto clínico. Si dudas, vuelve a la teoría: cada preposición tiene sus usos."}, {"id": "act2", "t": "Verbos con preposición", "c": "2A9D8F", "nivel": 3, "tiempo": "20 min", "sub": "40 verbos que exigen una preposición fija, todos en situaciones de consulta.", "chips": ["a", "de", "del", "con", "en", "por"], "intro": "Estos verbos <b>rigen</b> una preposición fija: <i>abusar de</i>, <i>ingresar en</i>, <i>acudir a</i>, <i>tardar en</i>. No hay regla: se aprenden con el verbo, como el género de los sustantivos."}], EJ={"act1": [{"n": 1, "segs": [{"t": "txt", "v": "El tratamiento "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " la ambliopía consiste en ejercicios visuales "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " mejorar la agudeza visual."}], "key": "El tratamiento para la ambliopía consiste en ejercicios visuales para mejorar la agudeza visual.", "resp": ["para", "para"], "fixed": false}, {"n": 2, "segs": [{"t": "txt", "v": "Necesitamos un intérprete "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " traducir las indicaciones al paciente."}], "key": "Necesitamos un intérprete para traducir las indicaciones al paciente.", "resp": ["para"], "fixed": false}, {"n": 3, "segs": [{"t": "txt", "v": "Este medicamento es "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " aliviar la inflamación "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " la conjuntivitis."}], "key": "Este medicamento es para aliviar la inflamación por la conjuntivitis.", "resp": ["para", "por"], "fixed": false}, {"n": 4, "segs": [{"t": "txt", "v": "El especialista recomendó una cirugía "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " corregir el estrabismo y mejorar la visión."}], "key": "El especialista recomendó una cirugía para corregir el estrabismo y mejorar la visión.", "resp": ["para"], "fixed": false}, {"n": 5, "segs": [{"t": "txt", "v": "La terapia de rehabilitación del habla es fundamental "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " pacientes con disartria."}], "key": "La terapia de rehabilitación del habla es fundamental para pacientes con disartria.", "resp": ["para"], "fixed": false}, {"n": 6, "segs": [{"t": "txt", "v": "El paciente necesita gafas "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " corregir su visión de cerca."}], "key": "El paciente necesita gafas para corregir su visión de cerca.", "resp": ["para"], "fixed": false}, {"n": 7, "segs": [{"t": "txt", "v": "El terapeuta trabajó con ejercicios específicos "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " mejorar la articulación de la paciente."}], "key": "El terapeuta trabajó con ejercicios específicos para mejorar la articulación de la paciente.", "resp": ["para"], "fixed": false}, {"n": 8, "segs": [{"t": "txt", "v": "El oculista prescribió gotas "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " aplicar "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " la mañana y "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " la noche."}], "key": "El oculista prescribió gotas para aplicar por la mañana y por la noche.", "resp": ["para", "por", "por"], "fixed": false}, {"n": 9, "segs": [{"t": "txt", "v": "La rehabilitación de los trastornos del habla es esencial "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " recuperar la fluidez."}], "key": "La rehabilitación de los trastornos del habla es esencial para recuperar la fluidez.", "resp": ["para"], "fixed": false}, {"n": 10, "segs": [{"t": "txt", "v": "El procedimiento "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " reducir la presión de los ojos fue exitoso."}], "key": "El procedimiento para reducir la presión de los ojos fue exitoso.", "resp": ["para"], "fixed": false}, {"n": 11, "segs": [{"t": "txt", "v": "Estos ejercicios están diseñados "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " fortalecer los músculos de la lengua."}], "key": "Estos ejercicios están diseñados para fortalecer los músculos de la lengua.", "resp": ["para"], "fixed": false}, {"n": 12, "segs": [{"t": "txt", "v": "La clínica ofrece servicios especiales "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " pacientes con discapacidades visuales."}], "key": "La clínica ofrece servicios especiales para pacientes con discapacidades visuales.", "resp": ["para"], "fixed": false}, {"n": 13, "segs": [{"t": "txt", "v": "La cirugía fue "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " corregir la catarata y restaurar la visión."}], "key": "La cirugía fue para corregir la catarata y restaurar la visión.", "resp": ["para"], "fixed": false}, {"n": 14, "segs": [{"t": "txt", "v": "El logopeda recomendó ejercicios "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " mejorar la capacidad de comunicación."}], "key": "El logopeda recomendó ejercicios para mejorar la capacidad de comunicación.", "resp": ["para"], "fixed": false}, {"n": 15, "segs": [{"t": "txt", "v": "Es importante seguir las indicaciones médicas "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " evitar complicaciones después de la cirugía ocular."}], "key": "Es importante seguir las indicaciones médicas para evitar complicaciones después de la cirugía ocular.", "resp": ["para"], "fixed": false}, {"n": 16, "segs": [{"t": "txt", "v": "Los lentes correctivos son "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " compensar la miopía."}], "key": "Los lentes correctivos son para compensar la miopía.", "resp": ["para"], "fixed": false}, {"n": 17, "segs": [{"t": "txt", "v": "La terapia "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " la deglución ayuda a los pacientes post-ictus."}], "key": "La terapia para la deglución ayuda a los pacientes post-ictus.", "resp": ["para"], "fixed": false}, {"n": 18, "segs": [{"t": "txt", "v": "El oftalmólogo está preocupado "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " la presencia de glaucoma."}], "key": "El oftalmólogo está preocupado por la presencia de glaucoma.", "resp": ["por"], "fixed": false}, {"n": 19, "segs": [{"t": "txt", "v": "El paciente necesita terapia "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " aprender a controlar el parpadeo excesivo."}], "key": "El paciente necesita terapia para aprender a controlar el parpadeo excesivo.", "resp": ["para"], "fixed": false}, {"n": 20, "segs": [{"t": "txt", "v": "La rehabilitación del lenguaje es clave "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " pacientes con afasia."}], "key": "La rehabilitación del lenguaje es clave para pacientes con afasia.", "resp": ["para"], "fixed": false}], "act2": [{"n": 1, "segs": [{"t": "txt", "v": "No abuse "}, {"t": "gap", "v": "del"}, {"t": "txt", "v": " ibuprofeno: puede dañarle el estómago."}], "key": "No abuse del ibuprofeno: puede dañarle el estómago.", "resp": ["del"], "fixed": false}, {"n": 2, "segs": [{"t": "txt", "v": "La paciente acudió "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " urgencias con dolor torácico."}], "key": "La paciente acudió a urgencias con dolor torácico.", "resp": ["a"], "fixed": false}, {"n": 3, "segs": [{"t": "txt", "v": "El paciente no se acuerda "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " tomar la medicación por la noche."}], "key": "El paciente no se acuerda de tomar la medicación por la noche.", "resp": ["de"], "fixed": false}, {"n": 4, "segs": [{"t": "txt", "v": "El equipo está acostumbrado "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " trabajar con intérprete."}], "key": "El equipo está acostumbrado a trabajar con intérprete.", "resp": ["a"], "fixed": false}, {"n": 5, "segs": [{"t": "txt", "v": "Le advirtieron "}, {"t": "gap", "v": "del"}, {"t": "txt", "v": " riesgo de sangrado con el anticoagulante."}], "key": "Le advirtieron del riesgo de sangrado con el anticoagulante.", "resp": ["del"], "fixed": false}, {"n": 6, "segs": [{"t": "txt", "v": "Nadie me ha avisado "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " que el paciente era alérgico a la penicilina."}], "key": "Nadie me ha avisado de que el paciente era alérgico a la penicilina.", "resp": ["de"], "fixed": false}, {"n": 7, "segs": [{"t": "txt", "v": "¿Se atreve "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " ponerse usted mismo la insulina?"}], "key": "¿Se atreve a ponerse usted mismo la insulina?", "resp": ["a"], "fixed": false}, {"n": 8, "segs": [{"t": "txt", "v": "Está cansada "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " que le digan que solo es estrés."}], "key": "Está cansada de que le digan que solo es estrés.", "resp": ["de"], "fixed": false}, {"n": 9, "segs": [{"t": "txt", "v": "En la historia social consta que se casó "}, {"t": "gap", "v": "con"}, {"t": "txt", "v": " su pareja hace cuarenta años."}], "key": "En la historia social consta que se casó con su pareja hace cuarenta años.", "resp": ["con"], "fixed": false}, {"n": 10, "segs": [{"t": "txt", "v": "Los síntomas coinciden "}, {"t": "gap", "v": "con"}, {"t": "txt", "v": " un cuadro de gastroenteritis."}], "key": "Los síntomas coinciden con un cuadro de gastroenteritis.", "resp": ["con"], "fixed": false}, {"n": 11, "segs": [{"t": "txt", "v": "Hubo que conectarlo "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " un respirador durante la primera noche."}], "key": "Hubo que conectarlo a un respirador durante la primera noche.", "resp": ["a"], "fixed": false}, {"n": 12, "segs": [{"t": "txt", "v": "Muchos pacientes creen "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " los remedios caseros: pregúnteles siempre."}], "key": "Muchos pacientes creen en los remedios caseros: pregúnteles siempre.", "resp": ["en"], "fixed": false}, {"n": 13, "segs": [{"t": "txt", "v": "Contamos "}, {"t": "gap", "v": "con"}, {"t": "txt", "v": " una logopeda en el equipo de rehabilitación."}], "key": "Contamos con una logopeda en el equipo de rehabilitación.", "resp": ["con"], "fixed": false}, {"n": 14, "segs": [{"t": "txt", "v": "Tuvimos que convencerla "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " que la cirugía era necesaria."}], "key": "Tuvimos que convencerla de que la cirugía era necesaria.", "resp": ["de"], "fixed": false}, {"n": 15, "segs": [{"t": "txt", "v": "Su hija cuida "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " él desde el ictus."}], "key": "Su hija cuida de él desde el ictus.", "resp": ["de"], "fixed": false}, {"n": 16, "segs": [{"t": "txt", "v": "Una herida mal curada puede convertirse "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " una infección grave."}], "key": "Una herida mal curada puede convertirse en una infección grave.", "resp": ["en"], "fixed": false}, {"n": 17, "segs": [{"t": "txt", "v": "El paciente confía "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " su médico de familia desde hace años."}], "key": "El paciente confía en su médico de familia desde hace años.", "resp": ["en"], "fixed": false}, {"n": 18, "segs": [{"t": "txt", "v": "La doctora Ortiz se dedica "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " la gastroenterología."}], "key": "La doctora Ortiz se dedica a la gastroenterología.", "resp": ["a"], "fixed": false}, {"n": 19, "segs": [{"t": "txt", "v": "El pronóstico depende "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " la rapidez con la que se trate."}], "key": "El pronóstico depende de la rapidez con la que se trate.", "resp": ["de"], "fixed": false}, {"n": 20, "segs": [{"t": "txt", "v": "El médico se dirigió "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " la familia para explicar el diagnóstico."}], "key": "El médico se dirigió a la familia para explicar el diagnóstico.", "resp": ["a"], "fixed": false}, {"n": 21, "segs": [{"t": "txt", "v": "Después de la rehabilitación, disfruta "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " una vida completamente normal."}], "key": "Después de la rehabilitación, disfruta de una vida completamente normal.", "resp": ["de"], "fixed": false}, {"n": 22, "segs": [{"t": "txt", "v": "Nos habla de que se ha enamorado "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " alguien y ha vuelto a salir de casa."}], "key": "Nos habla de que se ha enamorado de alguien y ha vuelto a salir de casa.", "resp": ["de"], "fixed": false}, {"n": 23, "segs": [{"t": "txt", "v": "El paciente se escapó "}, {"t": "gap", "v": "del"}, {"t": "txt", "v": " hospital sin firmar el alta voluntaria."}], "key": "El paciente se escapó del hospital sin firmar el alta voluntaria.", "resp": ["del"], "fixed": false}, {"n": 24, "segs": [{"t": "txt", "v": "El familiar se entromete "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " la consulta y no deja hablar al paciente."}], "key": "El familiar se entromete en la consulta y no deja hablar al paciente.", "resp": ["en"], "fixed": false}, {"n": 25, "segs": [{"t": "txt", "v": "Fíjese "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " el color de la orina: si es muy oscura, avísenos."}], "key": "Fíjese en el color de la orina: si es muy oscura, avísenos.", "resp": ["en"], "fixed": false}, {"n": 26, "segs": [{"t": "txt", "v": "En la sesión hablamos "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " cómo mejorar su alimentación."}], "key": "En la sesión hablamos de cómo mejorar su alimentación.", "resp": ["de"], "fixed": false}, {"n": 27, "segs": [{"t": "txt", "v": "El anciano llegó helándose "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " frío: descartamos hipotermia."}], "key": "El anciano llegó helándose de frío: descartamos hipotermia.", "resp": ["de"], "fixed": false}, {"n": 28, "segs": [{"t": "txt", "v": "El paciente ingresó "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " la unidad de ictus a las tres de la madrugada."}], "key": "El paciente ingresó en la unidad de ictus a las tres de la madrugada.", "resp": ["en"], "fixed": false}, {"n": 29, "segs": [{"t": "txt", "v": "El estrés influye "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " el control de la glucosa."}], "key": "El estrés influye en el control de la glucosa.", "resp": ["en"], "fixed": false}, {"n": 30, "segs": [{"t": "txt", "v": "Ya me han informado "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " los resultados de la biopsia."}], "key": "Ya me han informado de los resultados de la biopsia.", "resp": ["de"], "fixed": false}, {"n": 31, "segs": [{"t": "txt", "v": "En rehabilitación jugamos "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " las cartas para trabajar la motricidad fina."}], "key": "En rehabilitación jugamos a las cartas para trabajar la motricidad fina.", "resp": ["a"], "fixed": false}, {"n": 32, "segs": [{"t": "txt", "v": "No se lleva bien "}, {"t": "gap", "v": "con"}, {"t": "txt", "v": " su médico anterior y por eso ha cambiado de centro."}], "key": "No se lleva bien con su médico anterior y por eso ha cambiado de centro.", "resp": ["con"], "fixed": false}, {"n": 33, "segs": [{"t": "txt", "v": "El paciente se muere "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " miedo antes de entrar al quirófano."}], "key": "El paciente se muere de miedo antes de entrar al quirófano.", "resp": ["de"], "fixed": false}, {"n": 34, "segs": [{"t": "txt", "v": "Está bien cuidar a los demás, pero usted también debe mirar "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " su salud."}], "key": "Está bien cuidar a los demás, pero usted también debe mirar por su salud.", "resp": ["por"], "fixed": false}, {"n": 35, "segs": [{"t": "txt", "v": "El paciente preguntó "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " los resultados del análisis."}], "key": "El paciente preguntó por los resultados del análisis.", "resp": ["por"], "fixed": false}, {"n": 36, "segs": [{"t": "txt", "v": "No se preocupe tanto "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " eso: es una prueba de rutina."}], "key": "No se preocupe tanto por eso: es una prueba de rutina.", "resp": ["por"], "fixed": false}, {"n": 37, "segs": [{"t": "txt", "v": "Desde el accidente sueña "}, {"t": "gap", "v": "con"}, {"t": "txt", "v": " el momento del choque casi cada noche."}], "key": "Desde el accidente sueña con el momento del choque casi cada noche.", "resp": ["con"], "fixed": false}, {"n": 38, "segs": [{"t": "txt", "v": "Ha renunciado "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " fumar después del infarto."}], "key": "Ha renunciado a fumar después del infarto.", "resp": ["a"], "fixed": false}, {"n": 39, "segs": [{"t": "txt", "v": "El equipo se sorprendió "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " la rapidez de su recuperación."}], "key": "El equipo se sorprendió por la rapidez de su recuperación.", "resp": ["por"], "fixed": false}, {"n": 40, "segs": [{"t": "txt", "v": "La herida ha tardado "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " cicatrizar, pero ha quedado perfecta."}], "key": "La herida ha tardado en cicatrizar, pero ha quedado perfecta.", "resp": ["en"], "fixed": false}], "act3": [{"n": 1, "segs": [{"t": "txt", "v": "Hasta los sesenta años trabajó "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " una fábrica de amianto."}], "key": "Hasta los sesenta años trabajó en una fábrica de amianto.", "resp": ["en"], "fixed": false}, {"n": 2, "segs": [{"t": "txt", "v": "Mi paciente vive "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " un pueblo cerca de aquí."}], "key": "Mi paciente vive en un pueblo cerca de aquí.", "resp": ["en"], "fixed": false}, {"n": 3, "segs": [{"t": "txt", "v": "En esta farmacia se venden alimentos "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " diabéticos."}], "key": "En esta farmacia se venden alimentos para diabéticos.", "resp": ["para"], "fixed": false}, {"n": 4, "segs": [{"t": "txt", "v": "El cirujano le implantó una prótesis "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " titanio."}], "key": "El cirujano le implantó una prótesis de titanio.", "resp": ["de"], "fixed": false}, {"n": 5, "segs": [{"t": "txt", "v": "La fisioterapeuta trabaja "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " la sala de rehabilitación."}], "key": "La fisioterapeuta trabaja en la sala de rehabilitación.", "resp": ["en"], "fixed": false}, {"n": 6, "segs": [{"t": "txt", "v": ""}, {"t": "gap", "v": "Por"}, {"t": "txt", "v": " su tabaquismo desarrolló un enfisema."}], "key": "Por su tabaquismo desarrolló un enfisema.", "resp": ["Por"], "fixed": false}, {"n": 7, "segs": [{"t": "txt", "v": "Movimos al paciente a la camilla "}, {"t": "gap", "v": "entre"}, {"t": "txt", "v": " todos."}], "key": "Movimos al paciente a la camilla entre todos.", "resp": ["entre"], "fixed": false}, {"n": 8, "segs": [{"t": "txt", "v": "Preparó un informe "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " la sesión clínica."}], "key": "Preparó un informe para la sesión clínica.", "resp": ["para"], "fixed": false}, {"n": 9, "segs": [{"t": "txt", "v": "La ingresaron "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " deshidratación."}], "key": "La ingresaron por deshidratación.", "resp": ["por"], "fixed": false}, {"n": 10, "segs": [{"t": "txt", "v": "Vinieron dos ambulancias "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " atender "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " los heridos."}], "key": "Vinieron dos ambulancias para atender a los heridos.", "resp": ["para", "a"], "fixed": false}, {"n": 11, "segs": [{"t": "txt", "v": ""}, {"t": "gap", "v": "Desde"}, {"t": "txt", "v": " que trabajo "}, {"t": "gap", "v": "con"}, {"t": "txt", "v": " turnos de noche, no consigo dormir "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " el día."}], "key": "Desde que trabajo con turnos de noche, no consigo dormir por el día.", "resp": ["Desde", "con", "por"], "fixed": false}, {"n": 12, "segs": [{"t": "txt", "v": ""}, {"t": "gap", "v": "A"}, {"t": "txt", "v": " mi paciente no le gusta esperar: va "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " un lado "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " otro por el pasillo."}], "key": "A mi paciente no le gusta esperar: va de un lado para otro por el pasillo.", "resp": ["A", "de", "para"], "fixed": false}, {"n": 13, "segs": [{"t": "txt", "v": "Estará ingresado "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " planta "}, {"t": "gap", "v": "desde"}, {"t": "txt", "v": " el 12 "}, {"t": "gap", "v": "hasta"}, {"t": "txt", "v": " el 19 "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " agosto."}], "key": "Estará ingresado en planta desde el 12 hasta el 19 de agosto.", "resp": ["en", "desde", "hasta", "de"], "fixed": false}, {"n": 14, "segs": [{"t": "txt", "v": "Esta unidad de ictus fue fundada "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " el doctor Ortiz hace 28 años."}], "key": "Esta unidad de ictus fue fundada por el doctor Ortiz hace 28 años.", "resp": ["por"], "fixed": false}, {"n": 15, "segs": [{"t": "txt", "v": ""}, {"t": "gap", "v": "En"}, {"t": "txt", "v": " la mesa hay una caja "}, {"t": "gap", "v": "de"}, {"t": "txt", "v": " guantes "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " el personal."}], "key": "En la mesa hay una caja de guantes para el personal.", "resp": ["En", "de", "para"], "fixed": false}, {"n": 16, "segs": [{"t": "txt", "v": "La ambulancia estuvo a punto de chocar "}, {"t": "gap", "v": "con"}, {"t": "txt", "v": " un camión."}], "key": "La ambulancia estuvo a punto de chocar con un camión.", "resp": ["con"], "fixed": false}, {"n": 17, "segs": [{"t": "txt", "v": ""}, {"t": "gap", "v": "Según"}, {"t": "txt", "v": " mis cálculos, la analítica debe de estar a punto de llegar."}], "key": "Según mis cálculos, la analítica debe de estar a punto de llegar.", "resp": ["Según"], "fixed": false}, {"n": 18, "segs": [{"t": "txt", "v": "Me cobraron dos cajas de tiras reactivas "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " 25 euros."}], "key": "Me cobraron dos cajas de tiras reactivas por 25 euros.", "resp": ["por"], "fixed": false}, {"n": 19, "segs": [{"t": "txt", "v": "Vi un documental que hablaba "}, {"t": "gap", "v": "sobre"}, {"t": "txt", "v": " el microbioma."}], "key": "Vi un documental que hablaba sobre el microbioma.", "resp": ["sobre"], "fixed": false}, {"n": 20, "segs": [{"t": "txt", "v": "El niño se escondió "}, {"t": "gap", "v": "en"}, {"t": "txt", "v": " el baño "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " que no le pusieran la vacuna."}], "key": "El niño se escondió en el baño para que no le pusieran la vacuna.", "resp": ["en", "para"], "fixed": false}, {"n": 21, "segs": [{"t": "txt", "v": "Todo lo que hice, lo hice "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " el paciente."}], "key": "Todo lo que hice, lo hice por el paciente.", "resp": ["por"], "fixed": false}, {"n": 22, "segs": [{"t": "txt", "v": "¿Podrá tenerme el informe listo "}, {"t": "gap", "v": "para"}, {"t": "txt", "v": " el fin de semana?"}], "key": "¿Podrá tenerme el informe listo para el fin de semana?", "resp": ["para"], "fixed": false}, {"n": 23, "segs": [{"t": "txt", "v": ""}, {"t": "gap", "v": "Hasta"}, {"t": "txt", "v": " que no me traiga los análisis, no le puedo ajustar la dosis."}], "key": "Hasta que no me traiga los análisis, no le puedo ajustar la dosis.", "resp": ["Hasta"], "fixed": false}, {"n": 24, "segs": [{"t": "txt", "v": "¡"}, {"t": "gap", "v": "Desde"}, {"t": "txt", "v": " luego que puede venir acompañado a la consulta!"}], "key": "¡Desde luego que puede venir acompañado a la consulta!", "resp": ["Desde"], "fixed": false}, {"n": 25, "segs": [{"t": "txt", "v": ""}, {"t": "gap", "v": "Con"}, {"t": "txt", "v": " el lío de las urgencias, me olvidé de darle el volante "}, {"t": "gap", "v": "a"}, {"t": "txt", "v": " María."}], "key": "Con el lío de las urgencias, me olvidé de darle el volante a María.", "resp": ["Con", "a"], "fixed": false}, {"n": 26, "segs": [{"t": "txt", "v": "Repartimos una dosis "}, {"t": "gap", "v": "por"}, {"t": "txt", "v": " paciente."}], "key": "Repartimos una dosis por paciente.", "resp": ["por"], "fixed": false}]};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const norm=s=>s.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+let cur=null;
+
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('on',s.id===id));window.scrollTo(0,0);}
+$('b1').onclick=$('b2').onclick=()=>{show('s-home');$('h1').textContent='Las preposiciones en la consulta';
+  $('hsub').textContent='Teoría y 86 frases, todo en lenguaje clínico, con corrección automática';};
+
+/* ---- HOME ---- */
+const gt=$('g-teoria');
+TEORIA.forEach(t=>{
+  const b=document.createElement('button'); b.className='cc';
+  b.innerHTML='<div class="bar" style="background:#'+t.c+'"></div><div class="in">'+
+    '<div class="esp" style="color:#'+t.c+'">'+t.usos.length+' usos</div>'+
+    '<h3>'+esc(t.t)+'</h3><div class="res">'+esc(t.sub)+'</div></div>';
+  b.onclick=()=>openTeoria(t.id);
+  gt.appendChild(b);
+});
+const ga=$('g-acts');
+ACTS.forEach(a=>{
+  const n=EJ[a.id].length;
+  const b=document.createElement('button'); b.className='cc';
+  b.innerHTML='<div class="bar" style="background:#'+a.c+'"></div><div class="in">'+
+    '<div class="esp" style="color:#'+a.c+'">Actividad · '+n+' frases</div>'+
+    '<h3>'+esc(a.t)+'</h3><div class="res">'+esc(a.sub)+'</div>'+
+    '<div class="meta"><span class="tag">⏱ '+a.tiempo+'</span><span class="tag">Nivel <span class="dots">'+
+    [1,2,3].map(k=>'<span class="dot'+(k<=a.nivel?' f':'')+'"></span>').join('')+'</span></span></div></div>';
+  b.onclick=()=>openEj(a.id);
+  ga.appendChild(b);
+});
+
+/* ---- TEORÍA ---- */
+function renderTeoria(){
+  const w=$('teoria'); w.innerHTML='';
+  TEORIA.forEach(t=>{
+    const d=document.createElement('div'); d.className='acc'; d.id='t-'+t.id;
+    d.innerHTML='<div class="h"><span style="width:10px;height:32px;border-radius:5px;background:#'+t.c+';flex:none"></span>'+
+      '<span><span class="tt">'+esc(t.t)+'</span><br><span class="ss">'+esc(t.sub)+'</span></span><span class="ar">+</span></div>'+
+      '<div class="b">'+t.usos.map(u=>'<div class="uso"><div class="d">'+u[0]+'</div><div class="e">'+u[1]+'</div></div>').join('')+
+      (t.ojo?'<div class="ojo">⚠️ '+t.ojo+'</div>':'')+'</div>';
+    d.querySelector('.h').onclick=()=>{d.classList.toggle('open');
+      d.querySelector('.ar').textContent=d.classList.contains('open')?'−':'+';};
+    w.appendChild(d);
+  });
+  $('locs').innerHTML=LOCS.map(l=>'<span class="loc">'+esc(l)+'</span>').join('');
+  $('locnota').innerHTML='Grupos de palabras que funcionan como una preposición. Casi todas piden <b>de</b>. '+LOCNOTA;
+}
+renderTeoria();
+$('expand').onclick=()=>{
+  const all=document.querySelectorAll('#teoria .acc');
+  const open=[...all].every(a=>a.classList.contains('open'));
+  all.forEach(a=>{a.classList.toggle('open',!open);a.querySelector('.ar').textContent=open?'+':'−';});
+  $('expand').textContent=open?'Abrir todo':'Cerrar todo';
+};
+function openTeoria(id){
+  show('s-teoria'); $('h1').textContent='Teoría · las preposiciones';
+  $('hsub').textContent='Pulsa cada preposición para ver sus usos y ejemplos clínicos';
+  document.querySelectorAll('#teoria .acc').forEach(a=>{a.classList.remove('open');a.querySelector('.ar').textContent='+';});
+  const el=$('t-'+id); if(el){el.classList.add('open');el.querySelector('.ar').textContent='−';
+    setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'center'}),120);}
+}
+
+/* ---- EJERCICIO ---- */
+function openEj(id){
+  cur=ACTS.find(a=>a.id===id);
+  $('h1').textContent=cur.t;
+  $('hsub').textContent=EJ[id].length+' frases · se corrige solo';
+  $('e-meta').textContent='⏱ '+cur.tiempo;
+  $('e-intro').innerHTML='<div class="lbl">Cómo se hace</div><p style="font-size:14px;line-height:1.6">'+cur.intro+
+    '</p><p style="font-size:13px;color:var(--muted);margin-top:8px">Escribe la preposición en cada hueco (o tócala en la barra de arriba) y pulsa <b>Comprobar</b>. No hace falta poner tildes.</p>';
+  $('e-chips').innerHTML=cur.chips.map(c=>'<button class="chip">'+c+'</button>').join('');
+  $('e-chips').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
+    const f=document.activeElement;
+    if(f && f.classList.contains('gap')){f.value=b.textContent;
+      const gaps=[...document.querySelectorAll('.gap')]; const i=gaps.indexOf(f);
+      if(gaps[i+1])gaps[i+1].focus();}
+  });
+  renderItems(); show('s-ej');
+}
+function renderItems(){
+  const w=$('e-items'); w.innerHTML='';
+  EJ[cur.id].forEach(e=>{
+    const d=document.createElement('div'); d.className='it'; d.dataset.n=e.n;
+    let s='';
+    e.segs.forEach(sg=>{
+      if(sg.t==='txt') s+=esc(sg.v);
+      else s+='<input class="gap" data-a="'+esc(sg.v)+'" autocomplete="off" spellcheck="false">';
+    });
+    d.innerHTML='<span class="n">'+e.n+'</span><span class="s">'+s+
+      (e.fixed?'<span class="fixnote">· corregida</span>':'')+'</span>';
+    w.appendChild(d);
+  });
+  $('e-bar').style.width='0%'; $('e-score').classList.remove('on');
+  w.querySelectorAll('.gap').forEach(g=>g.addEventListener('keydown',ev=>{
+    if(ev.key==='Enter'){ev.preventDefault();
+      const gaps=[...w.querySelectorAll('.gap')]; const i=gaps.indexOf(ev.target);
+      if(gaps[i+1])gaps[i+1].focus(); else check();}
+  }));
+}
+function check(){
+  let ok=0,tot=0,done=0;
+  document.querySelectorAll('#e-items .it').forEach(it=>{
+    let allok=true, any=false;
+    it.querySelectorAll('.gap').forEach(g=>{
+      tot++;
+      g.classList.remove('ok','ko');
+      const nx=g.nextElementSibling;
+      if(nx && nx.classList && nx.classList.contains('sol')) nx.remove();
+      if(!g.value.trim()){allok=false;return;}
+      any=true; done++;
+      if(norm(g.value)===norm(g.dataset.a)){g.classList.add('ok');ok++;}
+      else{g.classList.add('ko');allok=false;
+        const s=document.createElement('span'); s.className='sol'; s.textContent=g.dataset.a;
+        g.after(s);}
+    });
+    it.classList.toggle('ok', allok && any);
+    it.classList.toggle('ko', !allok && any);
+  });
+  $('e-bar').style.width=(ok/tot*100)+'%';
+  const sc=$('e-score'); sc.classList.add('on');
+  const pct=Math.round(ok/tot*100);
+  sc.innerHTML=(pct===100?'🏆 ¡Perfecto! ':pct>=80?'🌟 ¡Muy bien! ':pct>=50?'💪 Vas bien. ':'📖 Repasa la teoría. ')+
+    '<b>'+ok+' de '+tot+'</b> huecos correctos ('+pct+' %).'+
+    (done<tot?' Te quedan '+(tot-done)+' sin responder.':'')+
+    (pct<100?' Los huecos en rojo muestran la respuesta correcta al lado.':'');
+}
+$('check').onclick=check;
+$('reset').onclick=renderItems;
+$('solve').onclick=()=>{
+  document.querySelectorAll('#e-items .gap').forEach(g=>{g.value=g.dataset.a;});
+  check();
+};
+</script>
+</body>
+</html>
